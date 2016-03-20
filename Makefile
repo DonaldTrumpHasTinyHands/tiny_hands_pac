@@ -108,8 +108,14 @@ static_site:
 # Static Site generation
 	$(call ECHO_BLUE,Generating Static Site)
 	$(PIP_INSTALL_CMD) django-medusa django-sendfile
+	$(MANAGE_CMD) compress
 	$(MANAGE_CMD) staticsitegen
 	$(MANAGE_CMD) collectstatic
+	(\
+		mkdir static_build/static; \
+		cp -R static/CACHE static_build/static/; \
+	)
+        
 
 compress_images:
 # Minify Images in media

@@ -20,7 +20,13 @@ MEDUSA_DEPLOY_DIR = os.path.join(PROJECT_ROOT, 'static_build')
 SENDFILE_BACKEND = 'sendfile.backends.simple'
 
 SECRET_KEY = '7nn(g(lb*8!r_+cc3m8bjxm#xu!q)6fidwgg&$p$6a+alm+eex'
-DATABASES['default']['PASSWORD'] = ''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'trumphands',
+    }
+}
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

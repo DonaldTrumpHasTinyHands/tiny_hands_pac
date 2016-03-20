@@ -1,0 +1,16 @@
+*.pyc
+.DS_Store
+*.swp
+/venv/
+/static/
+/static_build/
+/media/
+/.vagrant/
+ansible/.vagrant/
+/Vagrantfile.local
+/docs/_build/
+node_modules
+ansible/tiny_hands_pac_keystore/*
+ansible/files/*
+ansible/group_vars/*
+ansible/host_vars/*

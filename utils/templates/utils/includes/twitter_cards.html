@@ -3,8 +3,16 @@
 {% get_twitter_creator as twitter_creator %}
 {% get_twitter_description as twitter_description %}
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:url" content="{{ twitter_url }}">
-<meta name="twitter:creator" content="{{ twitter_creator }}">
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% load staticfiles %}
+
+{% if self.feed_image %}
+  {% image self.feed_image fill-1200x630-c100 as social_share_image %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:src" content="http://www.donaldtrumphastinyhands.com/static/CACHE/img{{ social_share_image.url }}">
+{% endif %}
+<meta name="twitter:url" content="http://www.donaldtrumphastinyhands.com{{ page.url }}">
+<meta name="twitter:site" content="@trumphandspac">
 <meta name="twitter:title" content="{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}">
-<meta name="twitter:description" content="{{ twitter_description }}">
+<meta name="twitter:description" content="{{ page.search_description }}">

@@ -114,6 +114,8 @@ static_site:
 	(\
 		mkdir static_build/static; \
 		cp -R static/CACHE static_build/static/; \
+		cp -R static/img static_build/static/; \
+		cp -R ../media static_build/; \
 	)
         
 

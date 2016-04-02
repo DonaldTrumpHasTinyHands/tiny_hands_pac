@@ -14,6 +14,7 @@ from wagtail.wagtailadmin.edit_handlers import (
 from wagtail.wagtailsearch import index
 from wagtail.wagtailforms.models import AbstractEmailForm, AbstractFormField
 from utils.models import LinkFields, ContactFields, RelatedLink, CarouselItem
+from wagtail.contrib.settings.models import BaseSetting, register_setting
 
 
 class HomePageContentItem(Orderable, LinkFields):
@@ -51,6 +52,14 @@ class HomePageRelatedLink(Orderable, RelatedLink):
 class HomePage(Page):
     title_text = RichTextField(null=True, blank=True)
     body = RichTextField(null=True, blank=True)
+    feed_image = models.ForeignKey(
+        Image,
+        help_text="An optional image to represent the page",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
 
     search_fields = Page.search_fields + (
         index.SearchField('body'),
@@ -68,8 +77,10 @@ HomePage.content_panels = [
     InlinePanel('related_links', label="Related links"),
 ]
 
-HomePage.promote_panels = Page.promote_panels
-
+HomePage.promote_panels = [
+    MultiFieldPanel(Page.promote_panels, "Common page configuration"),
+    ImageChooserPanel('feed_image'),
+]
 
 class StandardIndexPageRelatedLink(Orderable, RelatedLink):
     page = ParentalKey('pages.StandardIndexPage', related_name='related_links')
@@ -136,11 +147,11 @@ class StandardPage(Page):
         index.SearchField('intro'),
         index.SearchField('body'),
     )
-    
+
     @property
     def template(self):
         return self.template_string
-        
+
 
 StandardPage.content_panels = [
     FieldPanel('title', classname="full title"),

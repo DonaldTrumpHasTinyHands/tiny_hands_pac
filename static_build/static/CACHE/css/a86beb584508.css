@@ -1,0 +1,37 @@
+/* line 1, /Users/kyle/Sites/dt/tiny_hands_pac/documents_gallery/static/documents_gallery/css/main.scss */
+.gallery-thumb {
+  margin: 50px 0;
+  text-align: center; }
+  /* line 5, /Users/kyle/Sites/dt/tiny_hands_pac/documents_gallery/static/documents_gallery/css/main.scss */
+  .gallery-thumb a {
+    margin: 0 30px; }
+  /* line 10, /Users/kyle/Sites/dt/tiny_hands_pac/documents_gallery/static/documents_gallery/css/main.scss */
+  .gallery-thumb h5 {
+    text-align: center; }
+
+/* line 16, /Users/kyle/Sites/dt/tiny_hands_pac/documents_gallery/static/documents_gallery/css/main.scss */
+#documents-index {
+  text-align: center;
+  margin-top: 50px; }
+
+/* line 24, /Users/kyle/Sites/dt/tiny_hands_pac/documents_gallery/static/documents_gallery/css/main.scss */
+.documents-page strong {
+  color: #555; }
+
+/* line 29, /Users/kyle/Sites/dt/tiny_hands_pac/documents_gallery/static/documents_gallery/css/main.scss */
+.documents-page #documents {
+  text-align: center;
+  margin-top: 50px; }
+
+/* line 35, /Users/kyle/Sites/dt/tiny_hands_pac/documents_gallery/static/documents_gallery/css/main.scss */
+.documents-page p {
+  margin-bottom: 0.25rem; }
+
+/* line 40, /Users/kyle/Sites/dt/tiny_hands_pac/documents_gallery/static/documents_gallery/css/main.scss */
+.documents-page .tag-names li {
+  background: #43b1b0;
+  border-radius: 2px;
+  color: #fff;
+  padding: 5px;
+  display: inline;
+  margin: 0px 3px; }

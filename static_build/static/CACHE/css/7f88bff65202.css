@@ -1,0 +1,23 @@
+/* line 1, /Users/kyle/Sites/dt/tiny_hands_pac/photo_gallery/static/photo_gallery/css/main.scss */
+.gallery-thumb {
+  margin: 50px 0;
+  text-align: center; }
+  /* line 5, /Users/kyle/Sites/dt/tiny_hands_pac/photo_gallery/static/photo_gallery/css/main.scss */
+  .gallery-thumb a {
+    margin: 0 30px; }
+  /* line 10, /Users/kyle/Sites/dt/tiny_hands_pac/photo_gallery/static/photo_gallery/css/main.scss */
+  .gallery-thumb h5 {
+    text-align: center; }
+
+/* line 18, /Users/kyle/Sites/dt/tiny_hands_pac/photo_gallery/static/photo_gallery/css/main.scss */
+.gallery-page strong {
+  color: #555; }
+
+/* line 23, /Users/kyle/Sites/dt/tiny_hands_pac/photo_gallery/static/photo_gallery/css/main.scss */
+.gallery-page .tag-names li {
+  background: #43b1b0;
+  border-radius: 2px;
+  color: #fff;
+  padding: 5px;
+  display: inline;
+  margin: 0px 3px; }

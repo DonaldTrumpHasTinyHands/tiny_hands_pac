@@ -13,79 +13,50 @@
             <meta name="description" content="{% if self.search_description %}{{ self.search_description }}{% endif %}">
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}"/>
-            
+
             {% compress css %}
-                <link rel="stylesheet" type="text/css" href="{% static 'libs/foundation-sites/dist/foundation.min.css' %}">
-                <link rel="stylesheet" type="text/css" href="{% static 'libs/bxslider-4/dist/jquery.bxslider.min.css' %}">
-                <link rel="stylesheet" href="{% static 'libs/font-awesome/css/font-awesome.min.css' %}">
-                <link rel="stylesheet" type="text/css" href="{% static 'libs/lightbox2/src/css/lightbox.css' %}" />
-                <link rel="stylesheet" type="text/x-scss" href="{% static 'css/app.scss' %}">
+                <link rel="stylesheet" type="text/css" href="{% static 'libs/foundation-sites/dist/foundation.min.css' %}" media="all">
+                <link rel="stylesheet" type="text/css" href="{% static 'libs/bxslider-4/dist/jquery.bxslider.min.css' %}" media="all">
+                <link rel="stylesheet" href="{% static 'libs/font-awesome/css/font-awesome.min.css' %}" media="all">
+                <link rel="stylesheet" type="text/css" href="{% static 'libs/lightbox2/src/css/lightbox.css' %}"  media="all"/>
+                <link rel="stylesheet" type="text/x-scss" href="{% static 'css/app.scss' %}" media="all">
             {% endcompress %}
-            
+
             {% block extra_css %}{% endblock %}
-    
+
             {% include "utils/includes/facebook_opengraph.html" %}
             {% include "utils/includes/twitter_cards.html" %}
             {% include "utils/includes/google_analytics.html" %}
         </head>
-    
+
         <body class="{% block body_class %}{% endblock %}">
+          <div class="wrapper">
             {% wagtailuserbar %}
-    
+
             {% get_site_root as site_root %}
             {% top_menu parent=site_root calling_page=self %}
-            
-            <div class="off-canvas-content" data-off-canvas-content>
-                    
+
                     {% breadcrumbs %}
                     {% block content %}{% endblock %}
-            
+
                     <footer>
-                        <div class="sitemap hide-for-small-only">
-                            <div class="row">
-                              <div class="medium-4 columns">
-                                <div class="headline">
-                                  <h4>Explore Our Site</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="medium-12 columns">
-                                    {% site_menu parent=site_root calling_page=self %}
-                                </div>
-                            </div>
-                        </div>
                         <div class="contact-us">
                             <div class="row">
-                                <div class="medium-4 columns">
-                                    <h5 class="contact-head">Contact Us</h5>
-                                    {% get_contact_fields as contact %}
-                                    {% include "contact/includes/contact_card.html" with contact=contact only %}
+                                <div class="medium-12 columns text-center">
+                                    <a href="https://twitter.com/TrumpHandsPAC" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+                                    <a href="https://www.facebook.com/donaldtrumphastinyhands" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
                                 </div>
-                                <div class="medium-4 columns text-center">
-                                    <h5 class="contact-head">Follow Us</h5>
-                                    <a href="https://github.com/chrisdev" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
-                                    <a href="https://twitter.com/realchrisdev" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
-                                    <a href="#" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
-                                </div>
-                                <div class="medium-4 columns text-center">
-                                    <h5 class="contact-head">Find Us</h5>
-                                    {%  if contact.post_code %}
-                                        
-                                        {% get_google_maps_key as google_maps_key %}
-            
-                                        <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ contact.post_code }}&zoom=13&size=300x200&maptype=roadmap
-                                        &sensor=false&markers=color:green|{{ contact.post_code }}{% if google_maps_key %}&key={{ google_maps_key }}{% endif %}" />
-                                    {% endif %}
-                                </div>
+                              <div class="row">
+                                  <div class="medium-12 columns text-center">
+                                      <div class="legal-disclaimer">Paid for by Americans Against Insecure Billionaires with Tiny Hands PAC. Not authorized by any candidate or candidate's committee.</div>
+                                  </div>
+                              </div>
                             </div>
                         </div>
                     </footer>
-                    
-                        </div>
-                      </div>
-                    </div>            
-                    
+
+                    </div>
+
             {% compress js %}
                 <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
                 <script src="{% static 'libs/foundation-sites/dist/foundation.min.js' %}"></script>
@@ -94,7 +65,7 @@
                 <script src="{% static 'libs/lightbox2/src/js/lightbox.js' %}"></script>
                 <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
             {% endcompress %}
-    
+
             {% block extra_js %}
                 <script>
                   $(document).foundation();
@@ -115,7 +86,7 @@
                 <script>
                     $('.reveal_modal').click(function(event) {
                         event.preventDefault();
-            
+
                         $('#modal-content').empty();
                         var link = $(this).attr("href");
                         $('#modal-content').load(link + " .modal-content");
@@ -124,6 +95,3 @@
             {% endblock %}
         </body>
     </html>
-    
-    
-

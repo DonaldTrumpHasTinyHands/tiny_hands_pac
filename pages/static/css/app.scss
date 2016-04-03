@@ -57,6 +57,16 @@ $paragraph-font-family: 'Lato', Helvetica, sans;
 
 $header-font-color: #555 !default;
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
 // Responsive image/video classes
 .rich-text img {
   max-width: 100%;
@@ -88,7 +98,7 @@ $header-font-color: #555 !default;
     .dropdown.menu .is-dropdown-submenu-parent a::after {
       margin-top: 5px; border-color: $white transparent transparent; border-style: solid;}
     .is-drilldown-submenu-parent>a::after {border-color: transparent transparent transparent $white;}
-    .js-drilldown-back::before {border-color: transparent $white transparent transparent;}    
+    .js-drilldown-back::before {border-color: transparent $white transparent transparent;}
 }
 
 .off-canvas {
@@ -126,7 +136,7 @@ ul.share-buttons {
     .facebook {background: #3b5998;}
     .twitter {background: #00aced;}
     .google {background: #dd4b39;}
-    .linkedin {background: #007bb6;}    
+    .linkedin {background: #007bb6;}
     .pin {background: #cb2027;}
     .mail {background: #00bf8f;}
 }
@@ -139,6 +149,29 @@ box-shadow: 0;
 display: inline;
 }
 
+
+/* Blocks */
+
+
+.Hero {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.hero-block {
+  width: 100%;
+  min-height: 800px;
+  top: 0;
+  left: 0;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+
+
+
 #content {padding: 15px 0;min-height: 100vh;}
 
 .intro
@@ -150,7 +183,7 @@ display: inline;
   background: -ms-linear-gradient(90deg,#7474bf 1%,#5e9cd1 99%);
   background: -o-linear-gradient(90deg,#7474bf 1%,#5e9cd1 99%);
   background: linear-gradient(90deg,#7474bf 1%,#5e9cd1 40%);
-  
+
   h3
    {
     font-size: 30px;
@@ -158,7 +191,7 @@ display: inline;
     line-height: 1;
     color: $white;
   }
-  
+
   .rich-text
   {
     margin-bottom: 20px;
@@ -176,14 +209,14 @@ display: inline;
   padding: 20px 10px;
   color: $white;
   text-align: center;
-  
+
   h3,h4,a {color: $white;}
   h3{font-weight: 500;}
   h4{margin-bottom :3px;}
 }
 
 #blog_list {
-   hr:last-of-type {border:0px;} 
+   hr:last-of-type {border:0px;}
    a p{color: #555;}
 }
 
@@ -210,7 +243,7 @@ display: inline;
 }
 
 
-#news_feed 
+#news_feed
 {
     h6, li {margin-bottom :5px;}
     li{list-style: none; font-size:14px; margin-bottom: 0px;}
@@ -236,7 +269,7 @@ display: inline;
      h3{color: $white;}
      h6,p,li {color: $keppel;}
      p{margin-top: 10px; margin-bottom: 10px; text-align: left; font-style: italic; font-size: 15px;}
-     h6{text-align: right;}     
+     h6{text-align: right;}
      blockquote {border-left: 0px;}
 }
 
@@ -247,13 +280,13 @@ display: inline;
   background-color: $tundora;
   border-top: solid 1px $celeste;
   color: $white;
-  
+
   .headline
   {
     display: block;
     margin: 10px 0 10px 0;
   }
-  
+
   .headline h4
   {
     color: $white;
@@ -261,33 +294,44 @@ display: inline;
     padding-bottom: 5px;
     display: inline-block;
   }
-  
+
   a{
     color: white;
     text-decoration: none;
   }
-  
+
   a:hover{
     color: $eastern-blue;
     text-decoration: none;
     transition: all 0.25s ease;
     -webkit-transition: all 0.25s ease;
   }
-  
+
   h5 a{color: $keppel;}
-  
+
   li{list-style: none;}
 }
 
 .contact-us
 {
-  background-color: $mine-shaft;
-  color: white;
   padding: 10px 0;
-  border-top: solid 1px $mine-shaft;
-  
-  h5{
-    color: $white;
+}
+
+section {
+  padding-bottom: 300px;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 50px 0;
+  background: #CCC;
+
+  .legal-disclaimer {
+    margin: 50px 40px 0;
+    border: 1px solid #000;
+    padding: 10px 20px;
   }
 }
 
@@ -314,8 +358,8 @@ ul.side-nav {
      li {
         margin-bottom: 4px;
         a:not(.button) {
-            background: $keppel; 
-            border-radius: 2px; 
+            background: $keppel;
+            border-radius: 2px;
             color: $white;
         }
         a:hover:not(.button){
@@ -326,7 +370,7 @@ ul.side-nav {
 }
 
 #sidebar {
-    #news_feed 
+    #news_feed
     {
         h6 a, li{color: $mine-shaft;}
         h6, li{text-align: center; margin-bottom: 6px;}
@@ -344,8 +388,8 @@ ul.side-nav {
         font-size: 15px;
         color: $keppel;
         padding: 12px 25px 12px 0;
-        cursor:pointer;  
-        margin: 0; 
+        cursor:pointer;
+        margin: 0;
         font-weight: 400;}
     .block-faq_question:hover {color: $boston_blue;}
     .block-faq_question.close {background-image:url('/#{$static}/img/faq/close.png');}

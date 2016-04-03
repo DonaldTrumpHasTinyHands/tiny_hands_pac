@@ -15,6 +15,7 @@ from wagtail.wagtailsearch import index
 from wagtail.wagtailforms.models import AbstractEmailForm, AbstractFormField
 from utils.models import LinkFields, ContactFields, RelatedLink, CarouselItem
 from wagtail.contrib.settings.models import BaseSetting, register_setting
+from wagtail.wagtailimages.blocks import ImageChooserBlock
 
 
 class HomePageContentItem(Orderable, LinkFields):
@@ -49,9 +50,91 @@ class HomePageRelatedLink(Orderable, RelatedLink):
     page = ParentalKey('pages.HomePage', related_name='related_links')
 
 
+## MY STREAMFIELD BLOCKS ##
+
+class HtmlBlock(blocks.StructBlock):
+    html_content = blocks.TextBlock(required=False)
+
+    class Meta:
+        template = 'blocks/html_block.html'
+        icon = 'code'
+
+class WysiwygBlock(blocks.StructBlock):
+    wysiwyg_content = blocks.RichTextBlock(required=False)
+    horizontal_alignment = blocks.ChoiceBlock(choices=[
+        ('left', 'Left'),
+        ('right', 'Right'),
+        ('center', 'Center'),
+    ])
+
+    class Meta:
+        template = 'blocks/wysiwyg_block.html'
+        icon = 'pilcrow'
+
+class ColumnBlock(blocks.StructBlock):
+    background_image = ImageChooserBlock(required=False)
+    background_color = blocks.TextBlock(required=False)
+    padding = blocks.TextBlock(required=False)
+    max_width = blocks.TextBlock(required=False)
+    content = blocks.StreamBlock([
+        ('HTML', HtmlBlock()),
+        ('WYSIWYG', WysiwygBlock()),
+    ])
+
+    class Meta:
+        template = 'blocks/column_block.html'
+        icon = 'grip'
+
+class RowBlock(blocks.StructBlock):
+    background_image = ImageChooserBlock(required=False)
+    background_color = blocks.TextBlock(required=False)
+    padding = blocks.TextBlock(required=False)
+    max_width = blocks.TextBlock(required=False)
+    vertical_alignment = blocks.ChoiceBlock(choices=[
+        ('top', 'Top'),
+        ('bottom', 'Bottom'),
+        ('middle', 'Middle'),
+        ('baseline', 'Baseline'),
+    ])
+
+    content = blocks.StreamBlock([
+        ('HTML', HtmlBlock()),
+        ('WYSIWYG', WysiwygBlock()),
+        ('Column', ColumnBlock()),
+    ])
+
+    class Meta:
+        template = 'blocks/row_block.html'
+        icon = 'horizontalrule'
+
+class HeroBlock(blocks.StructBlock):
+    hero_image = ImageChooserBlock(required=False)
+    background_color = blocks.TextBlock(required=False)
+    padding = blocks.TextBlock(required=False)
+    logo = blocks.ChoiceBlock(choices=[
+        ('hide', 'Hide'),
+        ('show', 'Show'),
+        ('animate', 'Animate'),
+    ])
+    hero_content = blocks.StreamBlock([
+        ('HTML', HtmlBlock()),
+        ('WYSIWYG', WysiwygBlock()),
+        ('Row', RowBlock()),
+    ])
+    followup_content = blocks.StreamBlock([
+        ('HTML', HtmlBlock()),
+        ('WYSIWYG', WysiwygBlock()),
+        ('Row', RowBlock()),
+    ])
+
+    class Meta:
+        template = 'blocks/hero_block.html'
+        icon = 'pick'
+
+## END OF MY STREAMFIELD BLOCKS ##
+
 class HomePage(Page):
     title_text = RichTextField(null=True, blank=True)
-    body = RichTextField(null=True, blank=True)
     feed_image = models.ForeignKey(
         Image,
         help_text="An optional image to represent the page",
@@ -60,6 +143,12 @@ class HomePage(Page):
         on_delete=models.SET_NULL,
         related_name='+'
     )
+    body = StreamField([
+        ('HTML', HtmlBlock()),
+        ('WYSIWYG', WysiwygBlock()),
+        ('Row', RowBlock()),
+        ('Hero', HeroBlock()),
+    ],null=True,blank=True)
 
     search_fields = Page.search_fields + (
         index.SearchField('body'),
@@ -71,7 +160,7 @@ class HomePage(Page):
 HomePage.content_panels = [
     FieldPanel('title', classname="full title"),
     FieldPanel('title_text', classname="full"),
-    FieldPanel('body', classname="full"),
+    StreamFieldPanel('body'),
     InlinePanel('carousel_items', label="Carousel items"),
     InlinePanel('content_items', label="Content Blocks"),
     InlinePanel('related_links', label="Related links"),

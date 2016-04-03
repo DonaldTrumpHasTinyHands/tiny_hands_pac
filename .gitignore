@@ -2,8 +2,6 @@
 .DS_Store
 *.swp
 /venv/
-/static/
-/static_build/
 /media/
 /.vagrant/
 ansible/.vagrant/

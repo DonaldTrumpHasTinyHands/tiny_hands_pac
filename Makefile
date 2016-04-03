@@ -39,7 +39,7 @@ ECHO_RED = @echo "\033[33;31m $1\033[0m"
 HOST ?= localhost:8000
 DEPLOY_ENV = production
 
-virtualenv: 
+virtualenv:
 	virtualenv $(VIRTUALENV_NAME)
 
 requirements:
@@ -74,7 +74,7 @@ runserver:
 
 superuser:
 	echo "from django.contrib.auth.models import User; User.objects.create_superuser('superuser', 'superuser@example.com', 'pass')" | ./manage.py shell
-	
+
 update: update_pip update_bower
 
 update_pip:
@@ -115,14 +115,15 @@ static_site:
 		mkdir static_build/static; \
 		cp -R static/CACHE static_build/static/; \
 		cp -R static/img static_build/static/; \
-		cp -R ../media static_build/; \
+		mkdir static_build/static/CACHE/img; \
+		cp -R ./media static_build/static/CACHE/img/media/; \
 	)
-        
+
 
 compress_images:
 # Minify Images in media
 	grunt imagemin
-	
+
 deploy_user:
 ifeq ($(DEPLOY_ENV), vagrant)
 	$(call ECHO_BLUE, Create the deploy user for vagrant based staging VM)

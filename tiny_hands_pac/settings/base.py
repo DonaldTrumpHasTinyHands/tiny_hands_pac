@@ -75,7 +75,7 @@ INSTALLED_APPS = (
     'wagtail.contrib.settings',
 
     'wagtailfontawesome',
-    
+
     'utils',
     'pages',
     'blog',
@@ -188,11 +188,11 @@ FEED_MODEL_NAME = 'BlogPage'
 FEED_ITEM_DESCRIPTION_FIELD = 'intro'
 FEED_ITEM_CONTENT_FIELD = 'body'
 
-FEED_TITLE = 'From the Desk of John Blog'
+FEED_TITLE = 'Tiny Hands Big News'
 FEED_LINK = '/news/'
-FEED_DESCRIPTION = "News and views from around the Web"
-FEED_AUTHOR_EMAIL = 'john@johnblog.com'
-FEED_AUTHOR_LINK = 'https://johnblog.com'
+FEED_DESCRIPTION = ""
+FEED_AUTHOR_EMAIL = 'donaldtrumphastinyhands@gmail.com'
+FEED_AUTHOR_LINK = 'https://www.donaldtrumphastinyhands.com'
 
 
 # Settings for wagalytics

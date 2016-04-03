@@ -121,14 +121,22 @@ class HeroBlock(blocks.StructBlock):
         ('WYSIWYG', WysiwygBlock()),
         ('Row', RowBlock()),
     ])
-    followup_content = blocks.StreamBlock([
+
+    class Meta:
+        template = 'blocks/hero_block.html'
+        icon = 'pick'
+
+class HeroCallToActionBlock(blocks.StructBlock):
+    background_color = blocks.TextBlock(required=False)
+    pull_up = blocks.TextBlock(required=False)
+    cta_content = blocks.StreamBlock([
         ('HTML', HtmlBlock()),
         ('WYSIWYG', WysiwygBlock()),
         ('Row', RowBlock()),
     ])
 
     class Meta:
-        template = 'blocks/hero_block.html'
+        template = 'blocks/hero_cta_block.html'
         icon = 'pick'
 
 ## END OF MY STREAMFIELD BLOCKS ##
@@ -148,6 +156,7 @@ class HomePage(Page):
         ('WYSIWYG', WysiwygBlock()),
         ('Row', RowBlock()),
         ('Hero', HeroBlock()),
+        ('Hero_CTA', HeroCallToActionBlock()),
     ],null=True,blank=True)
 
     search_fields = Page.search_fields + (

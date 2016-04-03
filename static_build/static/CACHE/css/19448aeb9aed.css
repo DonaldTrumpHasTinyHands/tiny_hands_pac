@@ -4529,16 +4529,27 @@ table.hover tr:nth-of-type(even):hover {
     background: #8a8a8a;
     box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a; }
 
-/* line 61, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 60, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+/* line 65, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+.wrapper {
+  min-height: 100%;
+  position: relative; }
+
+/* line 71, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .rich-text img {
   max-width: 100%;
   height: auto; }
 
-/* line 65, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 75, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .responsive-object {
   position: relative; }
 
-/* line 68, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 78, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .responsive-object iframe,
 .responsive-object object,
 .responsive-object embed {
@@ -4548,142 +4559,142 @@ table.hover tr:nth-of-type(even):hover {
   width: 100%;
   height: 100%; }
 
-/* line 78, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 88, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .title-bar {
-  background: #43b1b0; }
+  background: #0a0a0a; }
 
-/* line 79, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 89, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .top-bar {
   border-top: 5px solid #238fb2;
   padding: 0; }
-  /* line 82, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 92, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .top-bar li {
     font-size: 13px; }
-  /* line 83, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 93, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .top-bar li.menu-text {
     font-size: 18px;
     color: #fff; }
-  /* line 84, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 94, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .top-bar a {
     color: #fff; }
-  /* line 85, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 95, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .top-bar ul, .top-bar .dropdown.menu .submenu {
     background: #43b1b0;
     border: 0px; }
-  /* line 86, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 96, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .top-bar .dropdown.menu .submenu {
     border-top: 3px solid #238fb2; }
-  /* line 87, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 97, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .top-bar .menu li:not(.menu-text) a {
     padding: 13px 15px; }
-  /* line 88, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 98, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .top-bar .dropdown.menu .is-dropdown-submenu-parent a::after {
     margin-top: 5px;
     border-color: #fff transparent transparent;
     border-style: solid; }
-  /* line 90, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 100, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .top-bar .is-drilldown-submenu-parent > a::after {
     border-color: transparent transparent transparent #fff; }
-  /* line 91, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 101, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .top-bar .js-drilldown-back::before {
     border-color: transparent #fff transparent transparent; }
 
-/* line 95, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 105, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .off-canvas a {
   color: #fff; }
 
-/* line 96, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 106, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .off-canvas .is-accordion-submenu-parent > a::after {
   border-color: #fff transparent transparent; }
 
-/* line 98, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 108, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .off-canvas-content {
   box-shadow: none; }
 
-/* line 99, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 109, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .off-canvas.position-left {
   height: 100%;
   background: #43b1b0; }
 
-/* line 101, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 111, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .active {
   background-color: #2199e8; }
 
-/* line 103, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 113, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .row {
   max-width: 68em; }
 
-/* line 105, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 115, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .breadcrumbs {
   margin: 20px 0 10px;
   background: #f6f6f6;
   border-radius: 15px;
   padding: 15px; }
-  /* line 110, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 120, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .breadcrumbs a {
     color: #43b1b0; }
 
-/* line 113, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 123, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .side-nav {
   margin-top: 15px; }
-  /* line 115, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 125, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .side-nav li {
     list-style: none; }
-  /* line 116, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 126, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .side-nav a {
     display: block;
     padding: 5px 0; }
 
-/* line 119, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 129, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .list-style li {
   list-style: none; }
 
-/* line 121, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 131, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons {
   list-style: none;
   padding: 0;
   margin: 0;
   margin-bottom: 15px; }
 
-/* line 122, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 132, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons li {
   display: inline;
   margin-right: 5px; }
 
-/* line 124, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 134, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons .fa {
   margin-right: 8px; }
 
-/* line 125, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 135, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons .button.tiny {
   padding: 8px 10px;
   font-size: 1rem; }
 
-/* line 126, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 136, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons .facebook {
   background: #3b5998; }
 
-/* line 127, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 137, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons .twitter {
   background: #00aced; }
 
-/* line 128, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 138, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons .google {
   background: #dd4b39; }
 
-/* line 129, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 139, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons .linkedin {
   background: #007bb6; }
 
-/* line 130, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 140, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons .pin {
   background: #cb2027; }
 
-/* line 131, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 141, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.share-buttons .mail {
   background: #00bf8f; }
 
-/* line 134, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 144, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #share-buttons img {
   width: 55px;
   padding: 5px;
@@ -4691,12 +4702,29 @@ ul.share-buttons .mail {
   box-shadow: 0;
   display: inline; }
 
-/* line 142, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* Blocks */
+/* line 156, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+.Hero {
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background-position: center center;
+  background-size: cover; }
+
+/* line 164, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+.hero-block {
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0; }
+
+/* line 175, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #content {
   padding: 15px 0;
   min-height: 100vh; }
 
-/* line 144, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 177, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .intro {
   color: #fff;
   padding: 50px 0px;
@@ -4705,146 +4733,146 @@ ul.share-buttons .mail {
   background: -ms-linear-gradient(90deg, #7474bf 1%, #5e9cd1 99%);
   background: -o-linear-gradient(90deg, #7474bf 1%, #5e9cd1 99%);
   background: linear-gradient(90deg, #7474bf 1%, #5e9cd1 40%); }
-  /* line 154, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 187, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .intro h3 {
     font-size: 30px;
     font-weight: 800;
     line-height: 1;
     color: #fff; }
-  /* line 162, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 195, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .intro .rich-text {
     margin-bottom: 20px; }
 
-/* line 168, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 201, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #carousel {
   margin-top: 60px; }
 
-/* line 173, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 206, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .section {
   background-color: #43b1b0;
   padding: 20px 10px;
   color: #fff;
   text-align: center; }
-  /* line 180, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 213, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .section h3, .section h4, .section a {
     color: #fff; }
-  /* line 181, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 214, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .section h3 {
     font-weight: 500; }
-  /* line 182, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 215, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .section h4 {
     margin-bottom: 3px; }
 
-/* line 186, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 219, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #blog_list hr:last-of-type {
   border: 0px; }
 
-/* line 187, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 220, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #blog_list a p {
   color: #555; }
 
-/* line 192, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 225, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #tags a {
   color: #fff; }
 
-/* line 195, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 228, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #blog-rss {
   float: right;
   color: #43b1b0; }
 
-/* line 202, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 235, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #people .people {
   text-align: center; }
-  /* line 204, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 237, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   #people .people img {
     border-radius: 3px;
     margin-bottom: 8px; }
-  /* line 205, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 238, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   #people .people .panel {
     padding: 10px; }
 
-/* line 208, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 241, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #people #contact-info li {
   list-style: none; }
 
-/* line 215, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 248, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #news_feed h6, #news_feed li {
   margin-bottom: 5px; }
 
-/* line 216, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 249, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #news_feed li {
   list-style: none;
   font-size: 14px;
   margin-bottom: 0px; }
 
-/* line 217, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 250, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #news_feed p {
   font-size: 14px;
   margin-bottom: 10px; }
 
-/* line 218, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 251, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #news_feed hr {
   border-color: #ccc; }
 
-/* line 219, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 252, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #news_feed hr:last-of-type {
   border: 0px; }
 
-/* line 220, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 253, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #news_feed .button {
   margin-bottom: 5px;
   padding: 5px 8px;
   float: right; }
 
-/* line 223, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 256, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #event_feed {
   margin-bottom: 25px; }
-  /* line 226, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 259, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   #event_feed h6, #event_feed p {
     margin: 0px; }
-  /* line 227, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 260, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   #event_feed .event {
     border: 1px solid #43b1b0;
     padding: 0;
     border-radius: 3px;
     margin-bottom: 10px; }
-  /* line 228, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 261, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   #event_feed h6 {
     color: #43b1b0; }
-  /* line 229, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 262, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   #event_feed a p {
     color: #333; }
-  /* line 230, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 263, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   #event_feed h6.date {
     color: #fff;
     background: #43b1b0;
     padding: 5px 0;
     margin: 0; }
-  /* line 231, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 264, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   #event_feed .details {
     padding: 5px; }
 
-/* line 234, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 267, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #testimonials .bx-wrapper .bx-viewport {
   background: transparent;
   border: 0px;
   box-shadow: none; }
 
-/* line 235, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 268, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #testimonials img {
   float: left;
   margin-right: 10px;
   border-radius: 100%; }
 
-/* line 236, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 269, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #testimonials h3 {
   color: #fff; }
 
-/* line 237, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 270, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #testimonials h6, #testimonials p, #testimonials li {
   color: #43b1b0; }
 
-/* line 238, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 271, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #testimonials p {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -4852,123 +4880,126 @@ ul.share-buttons .mail {
   font-style: italic;
   font-size: 15px; }
 
-/* line 239, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 272, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #testimonials h6 {
   text-align: right; }
 
-/* line 240, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 273, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #testimonials blockquote {
   border-left: 0px; }
 
-/* line 244, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 277, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .sitemap {
   padding: 20px 0;
   background-color: #444;
   border-top: solid 1px #ccc;
   color: #fff; }
-  /* line 251, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 284, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .sitemap .headline {
     display: block;
     margin: 10px 0 10px 0; }
-  /* line 257, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 290, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .sitemap .headline h4 {
     color: #fff;
     margin: 0 0 -2px 0;
     padding-bottom: 5px;
     display: inline-block; }
-  /* line 265, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 298, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .sitemap a {
     color: white;
     text-decoration: none; }
-  /* line 270, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 303, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .sitemap a:hover {
     color: #238fb2;
     text-decoration: none;
     transition: all 0.25s ease;
     -webkit-transition: all 0.25s ease; }
-  /* line 277, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 310, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .sitemap h5 a {
     color: #43b1b0; }
-  /* line 279, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 312, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   .sitemap li {
     list-style: none; }
 
-/* line 282, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 315, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .contact-us {
-  color: white;
   padding: 10px 0; }
-  /* line 287, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
-  .contact-us h5 {
-    color: #fff; }
 
-/* line 292, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 320, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+section:last-of-type {
+  padding-bottom: 300px; }
+
+/* line 324, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 footer {
-  position: absolute; }
+  width: 100%;
+  padding: 50px 0;
+  background: transparent; }
+  /* line 329, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  footer .legal-disclaimer {
+    margin: 50px 40px 0;
+    border: 1px solid #000;
+    padding: 10px 20px; }
 
-/* line 296, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 336, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .vcard {
   border: 0px;
   padding: 0;
   margin-bottom: 0px; }
 
-/* line 303, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 343, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 .contact-head {
   margin-bottom: 20px; }
 
-/* line 307, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
-.nav-top {
-  border-top: 5px solid #238fb2; }
-
-/* line 313, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 353, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 ul.side-nav {
   text-align: center;
   font-family: "Lato", Helvetica, sans; }
-  /* line 316, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+  /* line 356, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
   ul.side-nav li {
     margin-bottom: 4px; }
-    /* line 318, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+    /* line 358, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
     ul.side-nav li a:not(.button) {
       background: #43b1b0;
       border-radius: 2px;
       color: #fff; }
-    /* line 323, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+    /* line 363, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
     ul.side-nav li a:hover:not(.button) {
       background: #238fb2;
       color: #fff; }
 
-/* line 333, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 373, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #sidebar #news_feed h6 a, #sidebar #news_feed li {
   color: #333; }
 
-/* line 334, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 374, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #sidebar #news_feed h6, #sidebar #news_feed li {
   text-align: center;
   margin-bottom: 6px; }
 
-/* line 335, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 375, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #sidebar #news_feed p {
   display: none; }
 
-/* line 336, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 376, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #sidebar #news_feed hr {
   border: 0px; }
 
-/* line 337, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 377, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #sidebar #news_feed .news {
   border: 1px solid #43b1b0;
   border-radius: 5px;
   padding: 8px;
   margin-bottom: 10px; }
 
-/* line 338, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 378, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #sidebar #news_feed .rich-text {
   display: none; }
 
-/* line 343, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 383, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #faq .block-faq_answer {
   display: none; }
 
-/* line 344, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 384, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #faq .block-faq_question {
   background: url('/static/img/faq/open.png?3c6990073d6a') right no-repeat;
   font-size: 15px;
@@ -4978,18 +5009,18 @@ ul.side-nav {
   margin: 0;
   font-weight: 400; }
 
-/* line 352, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 392, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #faq .block-faq_question:hover {
   color: #3299BB; }
 
-/* line 353, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 393, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #faq .block-faq_question.close {
   background-image: url('/static/img/faq/close.png?3c6990073d6a'); }
 
-/* line 354, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 394, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #faq .block-faq_question {
   border-top: 1px solid #ccc; }
 
-/* line 355, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
+/* line 395, /Users/kyle/Sites/dt/tiny_hands_pac/pages/static/css/app.scss */
 #faq .block-faq_question:first-of-type {
   border: 0; }

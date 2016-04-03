@@ -1,0 +1,10 @@
+{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
+<style>
+.hero-cta-block {
+  {% if value.pull_up %} position: relative; top: -{{ value.pull_up }};{% endif %}
+}
+</style>
+<div class="hero-cta-block">
+  {{ value.cta_content }}
+</div>

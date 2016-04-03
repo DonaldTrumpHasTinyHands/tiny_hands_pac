@@ -9,11 +9,15 @@ $(document).foundation();
       controls: false,
       slideMargin:3,
      });
-      
+
     $('.adverts').bxSlider({
       minSlides: 3,
       maxSlides: 3,
       slideWidth: 210,
       slideMargin: 15
+    });
+
+    $('.menu-icon').on('click', function(e) {
+      $(this).toggleClass("active");
     });
  });

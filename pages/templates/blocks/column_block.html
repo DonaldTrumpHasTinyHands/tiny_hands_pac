@@ -1,0 +1,10 @@
+{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div style="
+  {% if value.background_color %} background-color: {{ value.background_color }};{% endif %}
+  {% if value.padding %} padding: {{ value.padding }};{% endif %}
+  {% if value.max_width %} max-width: {{ value.max_width }};{% endif %}
+  " class="row-block-content">
+  {{ value.content }}
+</div>

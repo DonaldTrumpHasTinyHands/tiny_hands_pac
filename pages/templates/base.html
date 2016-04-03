@@ -12,6 +12,7 @@
             <title>{% block title %}{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}{% block title_suffix %}{% endblock %}</title>
             <meta name="description" content="{% if self.search_description %}{{ self.search_description }}{% endif %}">
             <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
             <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}"/>
 
             {% compress css %}
@@ -30,32 +31,23 @@
         </head>
 
         <body class="{% block body_class %}{% endblock %}">
-          <div class="wrapper">
             {% wagtailuserbar %}
 
             {% get_site_root as site_root %}
             {% top_menu parent=site_root calling_page=self %}
 
-                    {% breadcrumbs %}
-                    {% block content %}{% endblock %}
+            {% breadcrumbs %}
+            {% block content %}{% endblock %}
 
-                    <footer>
-                        <div class="contact-us">
-                            <div class="row">
-                                <div class="medium-12 columns text-center">
-                                    <a href="https://twitter.com/TrumpHandsPAC" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
-                                    <a href="https://www.facebook.com/donaldtrumphastinyhands" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
-                                </div>
-                              <div class="row">
-                                  <div class="medium-12 columns text-center">
-                                      <div class="legal-disclaimer">Paid for by Americans Against Insecure Billionaires with Tiny Hands PAC. Not authorized by any candidate or candidate's committee.</div>
-                                  </div>
-                              </div>
-                            </div>
+            <footer>
+                <div class="footer-content">
+                        <div class="social-links">
+                            <a href="https://twitter.com/TrumpHandsPAC" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+                            <a href="https://www.facebook.com/donaldtrumphastinyhands" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
                         </div>
-                    </footer>
-
-                    </div>
+                        <div class="legal-disclaimer">Paid for by Americans Against Insecure Billionaires with Tiny Hands PAC. Not authorized by any candidate or candidate's committee.</div>
+                </div>
+            </footer>
 
             {% compress js %}
                 <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>

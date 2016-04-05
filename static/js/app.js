@@ -34,6 +34,7 @@ $(document).foundation();
  });
 
  function promptInfo(amount) {
+   ga('send', 'event', 'Donate', 'Step 1');
    $("#donation-widget").addClass('info-active')
    $("#donation-widget input#amount_input").attr("value",amount)
  }
@@ -66,11 +67,11 @@ $(document).foundation();
    for(var i in data)  {
      request += i + '=' + data[i] + '&'
    }
-   // req.send(request);
-   alert('data sync suppressed');
+   req.send(request);
  }
 
  function nextDonate() {
+   ga('send', 'event', 'Donate', 'Step 2');
    var handler = StripeCheckout.configure({
      key: 'pk_live_A2kJcpYemgN9x0yBwLyUzUxy',
      image: 'https://www.donaldtrumphastinyhands.com/share-preview.jpg',
@@ -78,6 +79,7 @@ $(document).foundation();
      token: function(token) {
        postForm(token.id);
        $("#donation-widget").addClass('donation-thanks')
+       ga('send', 'event', 'Donate', 'Donation');
      },
    });
    var errored = false,

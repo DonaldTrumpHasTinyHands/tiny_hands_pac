@@ -126,6 +126,36 @@ class HeroBlock(blocks.StructBlock):
         template = 'blocks/hero_block.html'
         icon = 'pick'
 
+class HeroDonateBlock(blocks.StructBlock):
+    hero_image = ImageChooserBlock(required=False)
+    background_color = blocks.TextBlock(required=False)
+    padding = blocks.TextBlock(required=False)
+    amount_one = blocks.TextBlock(required=False)
+    amount_two = blocks.TextBlock(required=False)
+    amount_three = blocks.TextBlock(required=False)
+    amount_four = blocks.TextBlock(required=False)
+    amount_five = blocks.TextBlock(required=False)
+    amount_six = blocks.TextBlock(required=False)
+    logo = blocks.ChoiceBlock(choices=[
+        ('hide', 'Hide'),
+        ('show', 'Show'),
+        ('animate', 'Animate'),
+    ])
+    hero_content = blocks.StreamBlock([
+        ('HTML', HtmlBlock()),
+        ('WYSIWYG', WysiwygBlock()),
+        ('Row', RowBlock()),
+    ])
+    thankyou_content = blocks.StreamBlock([
+        ('HTML', HtmlBlock()),
+        ('WYSIWYG', WysiwygBlock()),
+        ('Row', RowBlock()),
+    ])
+
+    class Meta:
+        template = 'blocks/hero_donate_block.html'
+        icon = 'pick'
+
 class HeroCallToActionBlock(blocks.StructBlock):
     background_color = blocks.TextBlock(required=False)
     pull_up = blocks.TextBlock(required=False)
@@ -140,6 +170,35 @@ class HeroCallToActionBlock(blocks.StructBlock):
         icon = 'pick'
 
 ## END OF MY STREAMFIELD BLOCKS ##
+
+class DonatePage(Page):
+    title_text = RichTextField(null=True, blank=True)
+    feed_image = models.ForeignKey(
+        Image,
+        help_text="An optional image to represent the page",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+    body = StreamField([
+        ('HTML', HtmlBlock()),
+        ('WYSIWYG', WysiwygBlock()),
+        ('Row', RowBlock()),
+        ('Hero', HeroDonateBlock()),
+        ('Hero_CTA', HeroCallToActionBlock()),
+    ],null=True,blank=True)
+
+    class Meta:
+        verbose_name = "Donation Page"
+
+DonatePage.content_panels = [
+    FieldPanel('title', classname="full title"),
+    FieldPanel('title_text', classname="full"),
+    StreamFieldPanel('body'),
+]
+
+
 
 class HomePage(Page):
     title_text = RichTextField(null=True, blank=True)
@@ -228,7 +287,13 @@ class StandardPage(Page):
     ]
     subtitle = models.CharField(max_length=255, blank=True)
     intro = RichTextField(blank=True)
-    body = RichTextField(blank=True)
+    body = StreamField([
+        ('HTML', HtmlBlock()),
+        ('WYSIWYG', WysiwygBlock()),
+        ('Row', RowBlock()),
+        ('Hero', HeroBlock()),
+        ('Hero_CTA', HeroCallToActionBlock()),
+    ],null=True,blank=True)
     template_string = models.CharField(
         max_length=255, choices=TEMPLATE_CHOICES,
         default='pages/standard_page.html'
@@ -255,7 +320,7 @@ StandardPage.content_panels = [
     FieldPanel('title', classname="full title"),
     FieldPanel('subtitle', classname="full title"),
     FieldPanel('intro', classname="full"),
-    FieldPanel('body', classname="full"),
+    StreamFieldPanel('body'),
     FieldPanel('template_string'),
     InlinePanel('carousel_items', label="Carousel items"),
     InlinePanel('related_links', label="Related links"),

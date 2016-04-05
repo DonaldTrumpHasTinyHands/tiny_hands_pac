@@ -1,0 +1,112 @@
+{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% image value.hero_image original as hero_image %}
+<style>
+section.Hero {
+  background-image: url('{{ hero_image.url }}');
+  background-color: #000;
+}
+{% if value.logo != 'hide' %}
+@media screen and (min-width: 640px) { #hands-logo { display: none; }}
+{% endif %}
+</style>
+
+<div class="hero-block">
+  {% if value.logo != 'hide' %}
+  <svg version="1.1" class="{% if value.logo == 'animate' %}animate{% endif %}" id="hands-hero" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  	 viewBox="0 0 134 100.1" style="enable-background:new 0 0 134 100.1;" xml:space="preserve">
+  <style type="text/css">
+  	.st0{fill:#C93F3F;}
+  	.st1{fill:#FFF;}
+  	.st2{fill:none;}
+  	.st3{fill:#fff;}
+  	.st4{fill:#C93F3F;}
+  </style>
+  <g>
+  	<g>
+  		<path class="st0" d="M103.5,74.7C103.6,74.7,103.6,74.7,103.5,74.7l10.3,0c3,0,5.5-2.5,5.5-5.5c0-3-2.4-5.4-5.4-5.5l-2.9,0
+  			c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9h5.8c0,0,0.1,0,0.1,0h-0.6c3,0,5.5-2.5,5.5-5.5c0-3-2.4-5.4-5.4-5.5h-5.3h0
+  			c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9l3.2,0c0,0,0.1,0,0.1,0h5c3,0,5.5-2.5,5.5-5.5c0-3-2.5-5.5-5.5-5.5h-0.2
+  			c-0.1,0-0.1,0-0.2,0h-7.9h0c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9l4.3,0h6.8c3-0.1,5.3-2.5,5.3-5.5c0-3-2.5-5.5-5.5-5.5
+  			l-18.8,0l-27.9,0l25.1,49.3C101.5,74.7,102.5,74.7,103.5,74.7z"/>
+  	</g>
+  	<path class="st1" d="M64.9,22.5c-0.2-0.4-4.8-8.9-8.3-12.3c-2.7-2.7-5.9-4.9-9.4-6.7C42.5,1.1,36.9-0.2,32,0
+  		c-4,0.2-9.6,1.3-13.6,6.1c-0.3,0.4-0.5,0.7-0.6,0.9c0,0.2,0,0.2,0,0.2c0.2,0.2,0.7,0.3,1.3,0.3c4-0.2,9.8,0.2,14.6,3.5
+  		c4.6,3.2,9.3,8.3,8.5,13.4c-0.1,0.5-0.5,0.8-0.9,0.8l-10.5,0l-18.2,0c-3,0-0.1,2.5-0.1,5.5c0,3-2.9,5.4,0,5.5h10.5
+  		c0.5,0,0.9,0.4,0.9,0.9c0,0.5-0.4,0.9-0.9,0.9l-1.4,0H15c-0.1,0-0.1,0-0.2,0h-0.2c-3,0-5.5,2.5-5.5,5.5s2.5,5.5,5.5,5.5h5
+  		c0,0,0.1,0,0.1,0l3.3,0c0.5,0,0.9,0.4,0.9,0.9c0,0.5-0.4,0.9-0.9,0.9h-4.3c-3,0-5.4,2.5-5.4,5.5c0,3,2.5,5.5,5.5,5.5H17
+  		c0,0,0.1,0,0.1,0h5.8c0.5,0,0.9,0.4,0.9,0.9c0,0.5-0.4,0.9-0.9,0.9l-1.1,0h-2.8c-3,0.1-5.4,2.5-5.4,5.5c0,3,2.5,5.5,5.5,5.5h11.2
+  		c0,0,0,0,0,0c3.6,0,7.2-0.5,10.6-1.5c0.4-0.1,0.8,0,1,0.3c0.2,0.3,0.3,0.7,0.1,1L29.4,100h73.9L81.9,57L64.9,22.5z M73.2,87.4
+  		l-6.6-4.8l-6.6,4.8l2.5-7.8l-6.6-4.8H64l2.5-7.8l2.5,7.8h8.2l-6.6,4.8L73.2,87.4z"/>
+  </g>
+  <polygon class="st2" points="59.9,87.4 66.5,82.6 73.2,87.4 70.6,79.6 77.2,74.8 69.1,74.8 66.5,67.1 64,74.8 55.8,74.8 62.4,79.6
+  	"/>
+  <path class="st1" d="M12.6,25.3C12.5,25.3,12.5,25.3,12.6,25.3L12.6,25.3C12.6,25.3,12.6,25.3,12.6,25.3z"/>
+  <path class="st3" d="M12.6,25.3L12.6,25.3l-6.7,0c-3,0-5.5,2.5-5.5,5.5c0,3,2.4,5.4,5.3,5.5h6.8c3,0,5.5-2.4,5.5-5.5
+  	C18,27.7,15.6,25.3,12.6,25.3z"/>
+  <path class="st1" d="M19.2,61.9c0.1,0,0.3,0,0.4,0h-0.9C18.9,61.9,19.1,61.9,19.2,61.9z"/>
+  <path class="st1" d="M19.2,50.9c-0.1,0-0.2,0-0.2,0h0.5C19.4,50.9,19.3,50.9,19.2,50.9z"/>
+  <path class="st3" d="M19.5,51H19h-8.5c-3,0-5.4,2.5-5.4,5.5c0,3,2.5,5.5,5.5,5.5H17c0,0,0.1,0,0.1,0h1.6h0.9c2.8-0.2,5-2.6,5-5.5
+  	C24.7,53.5,22.4,51.1,19.5,51z"/>
+  <path class="st1" d="M15,38.1c-0.2,0-0.3,0-0.5,0h1C15.4,38.1,15.2,38.1,15,38.1z"/>
+  <polygon class="st1" points="15,49.1 15,49.1 15,49.1 "/>
+  <path class="st3" d="M15.5,38.1h-1H5.9c-0.1,0-0.1,0-0.2,0H5.5c-3,0-5.5,2.5-5.5,5.5c0,3,2.5,5.5,5.5,5.5h5c0,0,0.1,0,0.1,0l4.4,0h0
+  	c3,0,5.5-2.5,5.5-5.5C20.5,40.7,18.3,38.4,15.5,38.1z"/>
+  <path class="st1" d="M21.1,63.8c-0.2,0-0.3,0-0.5,0h0.9C21.4,63.8,21.2,63.8,21.1,63.8z"/>
+  <path class="st1" d="M21.1,74.7C21.1,74.7,21.1,74.7,21.1,74.7L21.1,74.7C21.1,74.7,21.1,74.7,21.1,74.7z"/>
+  <path class="st3" d="M21.5,63.8h-0.9H17c-3,0.1-5.4,2.5-5.4,5.5c0,3,2.5,5.5,5.5,5.5H21h0.1c3,0,5.4-2.5,5.4-5.5
+  	C26.6,66.4,24.4,64,21.5,63.8z"/>
+  <path class="st4" d="M128.1,25.3L128.1,25.3l-6.7,0c-3,0-5.5,2.5-5.5,5.5c0,3,2.4,5.4,5.3,5.5h6.8c3,0,5.5-2.4,5.5-5.5
+  	C133.6,27.7,131.2,25.3,128.1,25.3z"/>
+  <path class="st4" d="M123.6,51h-0.5h-8.5c-3,0-5.4,2.5-5.4,5.5c0,3,2.5,5.5,5.5,5.5h6.4c0,0,0.1,0,0.1,0h1.6h0.9
+  	c2.8-0.2,5-2.6,5-5.5C128.8,53.5,126.5,51.1,123.6,51z"/>
+  <path class="st4" d="M129,38.1h-1h-8.6c-0.1,0-0.1,0-0.2,0h-0.2c-3,0-5.5,2.5-5.5,5.5c0,3,2.5,5.5,5.5,5.5h5c0,0,0.1,0,0.1,0l4.4,0
+  	h0c3,0,5.5-2.5,5.5-5.5C134,40.7,131.8,38.4,129,38.1z"/>
+  <path class="st4" d="M117.3,63.8h-0.9h-3.6c-3,0.1-5.4,2.5-5.4,5.5c0,3,2.5,5.5,5.5,5.5h3.9h0.1c3,0,5.4-2.5,5.4-5.5
+  	C122.3,66.4,120.1,64,117.3,63.8z"/>
+  </svg>
+  {% endif %}
+
+<div id="donation-widget">
+  <div class="donation-widget-header">
+    {{ value.hero_content }}
+  </div>
+  <div class="current-step"><i class="fa fa-usd" id="step-one"></i><i class="fa fa-user"></i><i class="fa fa-credit-card"></i></div>
+  <div class="donation-tray">
+    <div class="donation-tray-amount">
+      <ul class="donation-hero-amounts">
+        <li>{% if value.amount_one %}<a onclick="promptInfo(100*{{ value.amount_one }})">${{ value.amount_one }}</a>{% endif %}</li>
+        <li>{% if value.amount_two %}<a onclick="promptInfo(100*{{ value.amount_two }})">${{ value.amount_two }}</a>{% endif %}</li>
+        <li>{% if value.amount_three %}<a onclick="promptInfo(100*{{ value.amount_three }})">${{ value.amount_three }}</a>{% endif %}</li>
+        <li>{% if value.amount_four %}<a onclick="promptInfo(100*{{ value.amount_four }})">${{ value.amount_four }}</a>{% endif %}</li>
+        <li>{% if value.amount_five %}<a onclick="promptInfo(100*{{ value.amount_five }})">${{ value.amount_five }}</a>{% endif %}</li>
+        <li class="custom-input-value"><input value="" placeholder="{% if value.amount_six %}{{ value.amount_six }}{% endif %}" id="donation-custom-value"></li>
+      </ul>
+      <button onclick="customValue(this)">Continue <i class="fa fa-hand-o-right nudge-animate"></i></button>
+    </div>
+    <div class="donation-tray-info">
+
+      <form onSubmit="event.preventDefault(); nextDonate(this);">
+          <input type="text" id="name_input" placeholder="Your Name" value="">
+          <input id="amount_input" value="" type="hidden">
+          <input type="email" id="email_input" placeholder="Your Email" value="">
+          <input type="text" class="half" id="city_input" placeholder="Your City" value="">
+          <select type="text" class="half" id="state_input"><option value="">Your State</option><option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value="WI">WI</option><option value="WY">WY</option></select>
+          <input type="text" id="employer_input" placeholder="Your Employer" value="">
+          <div style="font-size: .9em; color: #666;">We need your employer to comply with Federal Election Laws</div>
+          <button>Next <i class="fa fa-hand-o-right nudge-animate"></i></button>
+      </form>
+
+    </div>
+    <div class="donation-tray-thanks">
+
+      {{ value.thankyou_content }}
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>

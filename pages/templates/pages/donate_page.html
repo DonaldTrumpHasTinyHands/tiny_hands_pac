@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+{% load static tiny_hands_pac_utils %}
+
+{% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
+
+{% block content %}
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<style>
+.top-bar-right { display: none; }
+</style>
+  {% for block in page.body %}
+    <section class="{{ block.block_type }}">{{ block }}</section>
+  {% endfor %}
+
+{% endblock %}

@@ -7,5 +7,5 @@
 <meta property="og:description" content="{% if self.search_description %}{{ self.search_description }}{% endif %}"/>
 {% if self.feed_image %}
     {% image self.feed_image width-1200 as img %}
-    <meta property="og:image" content="http://www.donaldtrumphastinyhands.com/static/CACHE/img{{ img.url }}" />
+    <meta property="og:image" content="http://www.donaldtrumphastinyhands.com{{ img.url }}" />
 {% endif %}

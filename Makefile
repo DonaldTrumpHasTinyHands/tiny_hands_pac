@@ -117,7 +117,8 @@ static_site:
 		cp -R static/img static_build/static/; \
 		cp -R static/libs static_build/static/; \
 		mkdir static_build/static/CACHE/img; \
-		cp -R ./media static_build/media/; \
+		cp -R ./media static_build/files/; \
+		cp -R ./static-github-stuff/* static_build/; \
 	)
 
 

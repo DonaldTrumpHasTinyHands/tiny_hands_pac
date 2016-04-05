@@ -170,7 +170,7 @@ STATICFILES_DIRS = (
 
 
 MEDIA_ROOT = join(PROJECT_ROOT, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/files/'
 
 
 # Django compressor settings

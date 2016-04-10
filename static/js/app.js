@@ -31,6 +31,13 @@ $(document).foundation();
       $("#donation-widget input#amount_input").attr("value","")
     });
 
+    donationAmount = parseInt(window.location.hash.substr(1));
+
+    if (donationAmount) {
+      $("#donation-custom-value").focus().val(donationAmount)
+    }
+
+
  });
 
  function promptInfo(amount) {

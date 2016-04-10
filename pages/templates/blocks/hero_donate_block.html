@@ -84,6 +84,7 @@ section.Hero {
         <li class="custom-input-value"><input value="" placeholder="{% if value.amount_six %}{{ value.amount_six }}{% endif %}" id="donation-custom-value"></li>
       </ul>
       <button onclick="customValue(this)">Continue <i class="fa fa-hand-o-right nudge-animate"></i></button>
+      <div class="donation-security"><i class="fa fa-lock"></i> Secure Payment Processed By Stripe</div>
     </div>
     <div class="donation-tray-info">
 
@@ -94,8 +95,9 @@ section.Hero {
           <input type="text" class="half" id="city_input" placeholder="Your City" value="">
           <select type="text" class="half" id="state_input"><option value="">Your State</option><option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value="WI">WI</option><option value="WY">WY</option></select>
           <input type="text" id="employer_input" placeholder="Your Employer" value="">
-          <div style="font-size: .9em; color: #666;">We need your employer to comply with Federal Election Laws</div>
+          <div style="font-size: .8em; color: #666;">We need your employer to comply with Federal Election Laws</div>
           <button>Next <i class="fa fa-hand-o-right nudge-animate"></i></button>
+          <div class="donation-security"><i class="fa fa-lock"></i> Secure Payment Processed By Stripe</div>
       </form>
 
     </div>

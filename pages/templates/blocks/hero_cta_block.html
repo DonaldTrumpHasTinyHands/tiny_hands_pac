@@ -1,10 +1,17 @@
 {% load wagtailcore_tags %}
 {% load wagtailcore_tags wagtailimages_tags %}
+{% if value.pull_up %}
 <style>
 .hero-cta-block {
-  {% if value.pull_up %} position: relative; top: -{{ value.pull_up }};{% endif %}
+  position: relative; top: -40px;
+}
+@media screen and (min-width: 640px) {
+  .hero-cta-block {
+    position: relative; top: -{{ value.pull_up }};
+  }
 }
 </style>
+{% endif %}
 <div class="hero-cta-block">
   {{ value.cta_content }}
 </div>

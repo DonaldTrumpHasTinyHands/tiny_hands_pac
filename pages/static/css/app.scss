@@ -275,7 +275,7 @@ section.WYSIWYG {
   background-position: center center;
   background-size: cover;
   box-sizing: border-box;
-  padding: 150px 40px 40px;
+  padding: 150px 20px 40px;
   color: #fff;
   margin-top: -65px;
 }
@@ -336,6 +336,7 @@ section.WYSIWYG {
   }
   .Hero {
     margin-top: -72px;
+    padding: 150px 40px 40px;
   }
 }
 
@@ -351,7 +352,7 @@ section.WYSIWYG {
 .donation-tray {
   overflow-x: hidden;
   position: relative;
-  height: 400px;
+  height: 460px;
   border-top: 1px solid #CCC;
   background: #efefef;
 }
@@ -410,14 +411,14 @@ section.WYSIWYG {
   position: absolute;
 }
 .donation-tray-amount {
-  padding: 30px 15px 15px;
+  padding: 10px 5px 0px;
   left: 0%;
   position: absolute;
   transition: left 0.5s;
 }
 .donation-tray-info {
   margin: 0;
-  padding: 30px;
+  padding: 13px 15px 0px;
   right: -100%;
   list-style: none;
   transition: right 0.5s;
@@ -428,6 +429,19 @@ section.WYSIWYG {
   right: -100%;
   list-style: none;
   transition: right 0.5s;
+}
+.donation-security {
+  text-align: center;
+  padding-top: 1.3em;
+  font-size: .9em;
+  color: #999;
+}
+.donation-security i {
+  font-size: 1.5em;
+  position: relative;
+  top: .1em;
+  padding-right: .2em;
+  color: #76c33d;
 }
 .donation-tray-info input {
   width: 100%;
